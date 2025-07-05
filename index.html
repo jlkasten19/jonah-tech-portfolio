@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tech Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  header, section, footer {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  header:hover, section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+  }
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+  a {
+    color: #1e40af;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    font-size: 0.9rem;
+    color: #1f2937;
+  }
+  #about p span {
+    color: #1e40af;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  #about p span:hover {
+    color: #1d4ed8;
+  }
+  #profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #1e40af;
+  }
+  .btn {
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #1d4ed8;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="IMG_0450.jpg" alt="Jonah Kasten Profile Photo" id="profile-pic">
+  <h1>Tech Portfolio</h1>
+  <p>Discover my journey in cybersecurity, ethical hacking, and practical technology labs, built with passion and precision to showcase my commitment to mastering tech and helping others secure their environments.</p>
+  <a href="JonahKastenResume.pdf" class="btn" download>Download Resume</a>
+</header>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m Jonah Kasten, a cybersecurity student focused on ethical hacking, network defense, and system hardening. In my <span id="freeTime">free time</span>, I actively explore new projects and learn advanced techniques beyond my degree curriculum, pushing myself to grow and refine skills that prepare me for real-world challenges in cybersecurity and tech.</p>
+</section>
+<section id="projects">
+  <h2>Projects</h2>
+  <p>My projects range from building VPN and firewall labs to engaging in ethical hacking challenges in lab environments to sharpen my penetration testing skills. Explore these projects and my progression on my <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>.</p>
+</section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>For collaborations, networking, or discussing cybersecurity, email me at <a href="mailto:kasten.jonah.lee@outlook.com">kasten.jonah.lee@outlook.com</a> or connect on <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>. I welcome opportunities to learn, grow, and contribute to the tech community.</p>
+</section>
+<footer>
+  <p>© 2025 Tech Portfolio | Jonah Kasten</p>
+</footer>
+<script>
+  gsap.from('header', {opacity: 0, y: -40, duration: 1});
+  gsap.from('#about', {opacity: 0, x: -40, duration: 1, delay: 0.5});
+  gsap.from('#projects', {opacity: 0, x: 40, duration: 1, delay: 1});
+  gsap.from('#contact', {opacity: 0, y: 40, duration: 1, delay: 1.5});
+
+  document.getElementById('freeTime').addEventListener('click', () => {
+    alert('In my free time, I experiment with new technologies, build small tools, and challenge myself with lab exercises to learn techniques that go beyond the classroom, strengthening my cybersecurity and problem-solving skills.');
+  });
+</script>
+</body>
+</html>
